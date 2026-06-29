@@ -1,0 +1,137 @@
+/* Thiết lập chung để xóa khoảng cách thừa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Định dạng hình nền toàn trang */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Nền tối thiên hà mặc định nếu chưa có ảnh */
+    background: radial-gradient(circle at center, #111432 0%, #070814 100%);
+    /* Bạn chỉ cần để file ảnh nền tên là background.jpg ở cùng thư mục */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Khung bọc bên ngoài card */
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Giao diện chính của Profile Card (Hiệu ứng kính mờ Glassmorphism) */
+.profile-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Khu vực Avatar */
+.avatar-container {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 22px auto;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Chấm xanh hiển thị online */
+.status-dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: #23a55a; /* Xanh lá chuẩn Discord */
+    border: 3px solid #070814;
+    border-radius: 50%;
+}
+
+/* Tên tài khoản */
+.name {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+/* Dòng trạng thái nhỏ phía dưới tên */
+.tagline {
+    font-size: 14px;
+    color: #3498db;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+/* Khung danh sách các nút */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Định dạng chung cho nút liên kết */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 14px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hiệu ứng mượt mà khi rê chuột qua nút */
+.social-btn:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Đổ màu riêng cho các icon để nhìn chuyên nghiệp hơn */
+.github svg { color: #ffffff; }
+.discord svg { color: #5865F2; }
+.spotify svg { color: #1DB954; }
+.facebook svg { color: #1877F2; }
+.youtube svg { color: #FF0000; }
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Giúp video tràn viền mà không bị méo */
+    z-index: -1; /* Đẩy video xuống lớp dưới cùng */
+    filter: brightness(0.6); /* Làm tối video đi một chút để chữ và card nổi bật hơn */
+}
