@@ -19,17 +19,14 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   MAN HINH CHO (WELCOME OVERLAY) - ĐÚNG THEO ẢNH MẪU
-   ========================================================================== */
 .welcome-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(4, 5, 13, 0.82); /* Nền tối sâu */
-    backdrop-filter: blur(25px); /* Làm mờ background mờ mờ ảo ảo */
+    background: rgba(4, 5, 13, 0.82); 
+    backdrop-filter: blur(25px); 
     -webkit-backdrop-filter: blur(25px);
     display: flex;
     justify-content: center;
@@ -38,7 +35,6 @@ body {
     transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.6s;
 }
 
-/* Biến mất mượt mà khi bấm nút */
 .welcome-overlay.hidden {
     opacity: 0;
     visibility: hidden;
@@ -50,7 +46,6 @@ body {
     padding: 20px;
 }
 
-/* Vòng tròn avatar mờ huyền bí phía trên */
 .welcome-circle {
     width: 130px;
     height: 130px;
@@ -70,7 +65,7 @@ body {
     height: 90%;
     border-radius: 50%;
     object-fit: cover;
-    opacity: 0.6; /* Để hơi ẩn hiện tinh tế */
+    opacity: 0.6; 
     filter: grayscale(30%);
 }
 
@@ -89,7 +84,6 @@ body {
     font-weight: 400;
 }
 
-/* Nút bấm Khám Phá thiết kế chuẩn theo hình mẫu */
 .entry-btn {
     background: transparent;
     color: #00a8ff;
@@ -113,9 +107,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   PROFILE CARD LAYOUT
-   ========================================================================== */
 .container {
     padding: 20px;
     width: 100%;
